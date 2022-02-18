@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Vector from "../../Assets/img/VEctor.png";
+import Vector from "../../Assets/img/Vctor.png";
 import Buy from "../../Assets/img/Buy.png";
 import Uns from "../../Assets/img/Uns.png";
 import Mobile from "../../Assets/img/mobile.png";
