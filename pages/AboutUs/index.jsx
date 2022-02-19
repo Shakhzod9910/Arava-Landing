@@ -4,7 +4,7 @@ import Image from "next/image";
 import Img1 from "../../src/Assets/img/img11.svg";
 import Img2 from "../../src/Assets/img/img22.svg";
 import Img3 from "../../src/Assets/img/img33.svg";
-// import ReactPlayer from "react-player";
+import ReactPlayer from "react-player";
 import Question from "../../src/Components/Questions";
 function AboutUs() {
   return (
@@ -54,7 +54,7 @@ function AboutUs() {
           </p>
         </div>
         <div className="right_wrapper">
-//           <ReactPlayer controls  border-radius="8px" url="https://youtu.be/PkkV1vLHUvQ"/>
+          <ReactPlayer controls  border-radius="8px" url="https://youtu.be/PkkV1vLHUvQ"/>
         </div>
       </div>
         <Question/>
