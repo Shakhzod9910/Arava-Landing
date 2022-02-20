@@ -6,13 +6,13 @@ import Instagram from "../../Assets/img/Instagram1.svg";
 import Facebook from "../../Assets/img/Facebook1.svg";
 import Tiktok from "../../Assets/img/Tiktok1.svg";
 import Youtube from "../../Assets/img/Youtube1.svg";
-// import Hamburger from '../../Assets/img/text.png'
 import Menu from '../../Assets/img/textmenu.svg'
 import { useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
-
+  const router = useRouter();
   const menu = useRef(null)
 
   function openMenu(evt){
@@ -25,9 +25,13 @@ function Navbar() {
   return (
     <section className="about ">
       <div className="navbar container">
+      <Link href="/Home">
         <div className="logo">
-          <Image src={Arava} alt="logo" />
+          
+           <Image src={Arava} alt="logo" />
+         
         </div>
+        </Link>
         <div className="hamburger" onClick={openMenu}>
         <Image src={Menu} alt="logo" />
         </div>
@@ -54,12 +58,11 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          {/* <h1>Biz haqimizda</h1> */}
           <Link href="/AboutUs">
-            <a>Biz haqimizda</a>
+            <a id={router.pathname == "/AboutUs" ? "active" : ""}>Biz haqimizda</a>
           </Link>
           <Link href="/help">
-            <a>Yordam</a>
+            <a id={router.pathname == "/help" ? "active" : ""}>Yordam</a>
           </Link>
           <button>Bog‘lanish</button>
           <div className="times" onClick={closeMenu}>
